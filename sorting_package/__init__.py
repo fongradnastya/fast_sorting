@@ -1,4 +1,6 @@
-__all__ = ['__main__', 'sort_func', 'input_proc']
+"""Пакет для быстрой сортировки списков методом Хоара"""
+__all__ = ['input_proc', 'sort_func']
+from . import *
 __title__ = 'sorting_package'
 __version__ = 1
 __author__ = 'Anastasia Fongrad'
