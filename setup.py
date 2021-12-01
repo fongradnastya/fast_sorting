@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages
 
-setup(name='fast_sorting',
+setup(
+      name='sorting_package',
 
       version='1',
 
@@ -16,7 +17,7 @@ setup(name='fast_sorting',
 
       packages=find_packages(exclude=['tests']),
 
-      long_description=open('README.md').read(),
+      long_description=open('README.md', encoding='UTF-8').read(),
 
       zip_safe=False,
 
