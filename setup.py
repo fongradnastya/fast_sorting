@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
       name='sorting_package',
 
-      version='1',
+      version='1.1',
 
       url='https://github.com/fongradnastya/fast_sorting',
 
@@ -24,5 +24,7 @@ setup(
       python_requires='>=3.6, <4',
 
       setup_requires=['fire', 'pytest'],
+
+      include_package_data=True,
 
       test_suite='test')
