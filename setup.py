@@ -5,7 +5,7 @@ setup(
 
       version='1',
 
-      url='https://github.com/the-gigi/conman',
+      url='https://github.com/fongradnastya/fast_sorting',
 
       license='MIT',
 

@@ -1,5 +1,6 @@
+"""Тестирует функцию quick_sort с заданными границами"""
 import pytest
-from ..sort_func import quick_sort
+from sorting_package.sort_func import quick_sort
 
 
 def test_with_pos():
