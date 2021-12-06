@@ -1,11 +1,12 @@
 """Тестирует функцию quick_sort со значением reverse=False"""
 import pytest
-from sorting_package.sort_func import quick_sort
+from ..sort_func import quick_sort
 
 
-def test_empty():
+def test_empty(say_hello):
     srt_lst = []
     quick_sort(srt_lst)
+    print(say_hello)
     assert srt_lst == [], "Ошибка с пустым списком"
 
 

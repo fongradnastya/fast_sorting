@@ -23,7 +23,7 @@ setup(
 
       python_requires='>=3.6, <4',
 
-      setup_requires=['fire', 'pytest'],
+      setup_requires=['click', 'pytest'],
 
       include_package_data=True,
 

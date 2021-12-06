@@ -1,5 +1,17 @@
 """Содержит функции для обработки пользовательского ввода и команд"""
 import re
+from random import randint
+from sort_func import quick_sort
+
+
+examples = (
+        {"w", "o", "r", "l", "d"},
+        ["1", "5", "0", "7", "3"],
+        [1, 0.2, 3 / 5, 12.8, -10, -2],
+        [randint(-100, 100) for _ in range(100)],
+        [4, -10, 0, '1', 6, 1.8, 2, 9, -3, -1, 0, 4],
+        (1, 2, 0)
+        )
 
 
 def sequence_validation() -> list:
@@ -56,14 +68,12 @@ def print_menu():
     Функция print_menu выводит в консоль меню и обрабатывает
     команды пользователя
     """
-    from sort_func import quick_sort
     print('Для выхода введите exit')
     print('Для использования готовых примеров введите example')
     print('Для ввода собственной последовательность введите new')
     while (command := input()) != 'exit':
         if command == 'example':
-            from examples import exmpl
-            for ex in exmpl:
+            for ex in examples:
                 quick_sort(ex, reverse=True)
                 quick_sort(ex, reverse=False)
         elif command == 'new':

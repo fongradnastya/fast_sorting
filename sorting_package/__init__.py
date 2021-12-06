@@ -1,5 +1,5 @@
 """Пакет для быстрой сортировки списков методом Хоара"""
-__all__ = ['input_proc', 'sort_func']
+__all__ = ['input_proc', 'sort_func', 'tests']
 from . import *
 __title__ = 'sorting_package'
 __version__ = 1.1

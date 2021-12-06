@@ -1,6 +1,6 @@
 """Тестирует функцию quick_sort со значением reverse=True"""
 import pytest
-from sorting_package.sort_func import quick_sort
+from ..sort_func import quick_sort
 
 
 def test_rev_empty():
