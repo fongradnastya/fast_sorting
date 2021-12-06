@@ -1,7 +1,7 @@
 """Содержит функции для обработки пользовательского ввода и команд"""
 import re
 from random import randint
-from sort_func import quick_sort
+from .sort_func import quick_sort
 
 
 examples = (
