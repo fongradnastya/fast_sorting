@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
       name='sorting_package',
-      version='1.3',
+      version='1.3.3',
       url='https://github.com/fongradnastya/fast_sorting',
       license='MIT',
       author='Fongrad Anastasia',
