@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
       name='sorting_package',
 
-      version='1.1',
+      version='1.2',
 
       url='https://github.com/fongradnastya/fast_sorting',
 
@@ -18,6 +18,8 @@ setup(
       packages=find_packages(exclude=['tests']),
 
       long_description=open('README.md', encoding='UTF-8').read(),
+
+      long_description_content_type='markdown',
 
       zip_safe=False,
 

@@ -1,7 +1,7 @@
 """Содержит функции для обработки пользовательского ввода и команд"""
 import re
 from random import randint
-from .sort_func import quick_sort
+from sort_func import quick_sort
 
 
 examples = (
@@ -21,7 +21,7 @@ def sequence_validation() -> list:
     """
     print("Введите значения для сортировки в формате: 1, '4a', -3, 'qwerty'")
     pattern = r"""((-?\d*|'\w*'|"\w*")(,\s)?)*"""
-    while not re.fullmatch(pattern, s := input()):
+    while not re.fullmatch(pattern, s := input()) or s == '':
         print('Некорректный формат ввода, пожалуйста, введите снова.')
     values = list(s.split(', '))
     for idx, c in enumerate(values):

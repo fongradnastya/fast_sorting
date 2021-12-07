@@ -34,22 +34,26 @@ def check_sort_ability(sort_func):
         if not dec:
             sort_func(*args, dec=dec, **kwargs)
             return None
-        try:
-            if type(args[0]) is not list:
-                raise TypeError("Неподходящий для сортировки тип объекта",
-                                args[0], type(args[0]))
-        except TypeError as ex:
-            print(*ex.args)
-            return None
+        if not args:
+            raise SyntaxError('Не переданы обязательные аргументы')
         else:
             try:
-                sort_func(*args, **kwargs)
-            except IndexError as ex:
-                print("Параметры begin и end должны быть значениями индексов "
-                      "в пределах списка", ex)
+                if type(args[0]) is not list:
+                    raise TypeError("Неподходящий для сортировки тип объекта",
+                                    args[0], type(args[0]))
             except TypeError as ex:
-                print(f"Сортировка невозможна, список {args[0]} содержит "
-                      f"элементы разных типов.", ex)
+                print(*ex.args)
+                return None
+            else:
+                try:
+                    sort_func(*args, **kwargs)
+                except IndexError as ex:
+                    print(
+                        "Параметры begin и end должны быть значениями индексов"
+                        " в пределах списка", ex)
+                except TypeError as ex:
+                    print(f"Сортировка невозможна, список {args[0]} содержит "
+                          f"элементы разных типов.", ex)
     return inner
 
 
