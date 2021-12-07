@@ -3,10 +3,9 @@ import pytest
 from ..sort_func import quick_sort
 
 
-def test_empty(say_hello):
+def test_empty():
     srt_lst = []
     quick_sort(srt_lst)
-    print(say_hello)
     assert srt_lst == [], "Ошибка с пустым списком"
 
 
